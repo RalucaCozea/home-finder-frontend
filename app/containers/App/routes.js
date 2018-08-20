@@ -1,4 +1,5 @@
 import HomePage from 'containers/dashboard/HomePage/Loadable';
+import Header from 'containers/elements/Header';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export const buildRoute = (
@@ -14,7 +15,25 @@ const routes = [
   buildRoute(
     '/',
     HomePage,
-    null,
+    Header,
+    'exact'
+  ),
+  buildRoute(
+    '/filters',
+    HomePage,
+    Header,
+    'exact'
+  ),
+  buildRoute(
+    '/locations',
+    HomePage,
+    Header,
+    'exact'
+  ),
+  buildRoute(
+    '/map',
+    HomePage,
+    Header,
     'exact'
   ),
 
